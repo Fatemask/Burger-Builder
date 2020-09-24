@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from "./BurgerIng.module.css";
-const burgerIng = (props) =>{
-    let ingridient = null;
+import PropTypes from 'prop-types';
 
-    switch(props.type) {
+class BurgerIng extends Component {
+    render(){
+        let ingridient = null;
+
+    switch(this.props.type) {
         case('bread-bottom'):
             ingridient=<div className={classes.BreadBottom}></div>;
             break;
@@ -32,6 +35,11 @@ const burgerIng = (props) =>{
         
     }
     return ingridient;
+    }
+}
+
+BurgerIng.propTypes = {
+    type:PropTypes.string.isRequired,
 };
 
-export default burgerIng;
+export default BurgerIng;
