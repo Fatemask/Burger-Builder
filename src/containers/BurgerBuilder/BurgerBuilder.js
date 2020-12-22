@@ -50,7 +50,7 @@ class BurgerBulder extends Component{
                 },
                 email:"exampleid@gmail.com"
             },
-            deliveryMethos:"fastest"
+            deliveryMethod:"fastest"
         }
         axios.post('/orders.json', order)
         .then(this.setState({loading:false , purchasing: false}))
